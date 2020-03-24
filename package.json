@@ -10,8 +10,8 @@
   "scripts": {
     "clean": "rimraf dist",
     "build-babel": "babel ./src --out-dir dist",
-    "build": "npm run clean && npm run build-babel",
-    "start": "NODE_ENV=production npm run build && node ./dist/index.js",
+    "build": "yarn clean && yarn build-babel",
+    "start": "yarn build && NODE_ENV=production node ./dist/index.js",
     "dev": "NODE_ENV=development nodemon --exec babel-node src/index.js",
     "test": "jest"
   },
@@ -27,6 +27,7 @@
     "@babel/core": "^7.9.0",
     "@babel/node": "^7.8.7",
     "@babel/preset-env": "^7.9.0",
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.2",
+    "rimraf": "^3.0.2"
   }
 }
