@@ -5,10 +5,15 @@ if (process.env.NODE_ENV === 'development') {
 	serviceAccount = require('../config');
 } else {
 	let {
-		FIREBASE_PRIVATE_KEY
+		project_id,
+		client_email,
+		private_key,
     } = process.env;
-    
-    serviceAccount = JSON.parse(FIREBASE_PRIVATE_KEY);
+    serviceAccount = {
+		project_id,
+		client_email,
+		private_keym
+	};
 }
 
 admin.initializeApp({
