@@ -8,7 +8,7 @@ if (process.env.NODE_ENV === 'development') {
 		FIREBASE_PRIVATE_KEY
     } = process.env;
     
-    serviceAccount = JSON.parse(FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n'));
+    serviceAccount = JSON.parse(FIREBASE_PRIVATE_KEY);
 }
 
 admin.initializeApp({
