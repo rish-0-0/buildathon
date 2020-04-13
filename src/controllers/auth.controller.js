@@ -51,7 +51,7 @@ export const check = (req, res) => {
                 });
                 break;
             default:
-                error_response(res, err.code);
+                error_response(res, error.code);
                 break;
         }
     });
