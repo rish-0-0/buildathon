@@ -16,4 +16,3 @@ People who can deploy to the heroku hosting are
 Team:
 1. Rishabh Anand
 2. Shriram Chenniappa
-3. Nishant Chitkara
