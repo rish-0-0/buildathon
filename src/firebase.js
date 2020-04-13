@@ -12,7 +12,7 @@ if (process.env.NODE_ENV === 'development') {
     serviceAccount = {
 		project_id,
 		client_email,
-		private_key
+		private_key: private_key.replace(/\\n/g, '\n')
 	};
 }
 
