@@ -15,7 +15,7 @@ app.use(morgan('dev'));
 // End of middlewares
 
 // Routes
-app.use('/api', routes);
+app.use('/api/v1', routes);
 app.use((req, res) => {
     res.status(404).json({
         success: false,
@@ -24,6 +24,6 @@ app.use((req, res) => {
     });
 });
 // End of Routes
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 4000;
 
 app.listen(PORT, () => console.log(`server running on port ${PORT} ...`));
